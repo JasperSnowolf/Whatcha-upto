@@ -1,0 +1,14 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "whatcha-upto-20190401214342-authRole",
+            "UnauthRoleArn": "arn:aws:iam::318927311531:role/whatcha-upto-20190401214342-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::318927311531:role/whatcha-upto-20190401214342-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "whatcha-upto-20190401214342-deployment",
+            "UnauthRoleName": "whatcha-upto-20190401214342-unauthRole",
+            "StackName": "whatcha-upto-20190401214342",
+            "StackId": "arn:aws:cloudformation:us-east-1:318927311531:stack/whatcha-upto-20190401214342/bfc782a0-54e8-11e9-8675-0e75601403f8"
+        }
+    }
+}
