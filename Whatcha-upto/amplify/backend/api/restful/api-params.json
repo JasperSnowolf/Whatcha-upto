@@ -1,0 +1,36 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "whatchauptoa419f787",
+            "privacy": {
+                "protected": true,
+                "auth": "rw",
+                "unauth": "r"
+            }
+        }
+    ],
+    "resourceName": "restful",
+    "apiName": "restful",
+    "functionArns": [
+        {
+            "lambdaFunction": "whatchauptoa419f787"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 1,
+        "authRoleName": "whatcha-upto-20190401222922-authRole",
+        "unAuthRoleName": "whatcha-upto-20190401222922-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "whatchauptoa419f787",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

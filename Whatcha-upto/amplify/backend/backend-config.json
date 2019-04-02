@@ -4,5 +4,50 @@
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation"
 		}
+	},
+	"storage": {
+		"dynamo52c826ea": {
+			"service": "DynamoDB",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"function": {
+		"whatchauptoa419f787": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [
+				{
+					"category": "storage",
+					"resourceName": "dynamo52c826ea",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			]
+		}
+	},
+	"api": {
+		"restful": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "whatchauptoa419f787",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			]
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation"
+		}
 	}
 }
